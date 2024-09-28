@@ -1,0 +1,313 @@
+<<<<<<< HEAD
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins',sans-serif;
+    box-sizing: border-box;  
+}
+.hero{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #010758, #490d61);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+}
+.hero h1{
+    font-size: 45px;
+    font-weight: 500px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+} 
+.hero h1 span{
+    color: #ff2963;
+}
+textarea{
+    width: 600px;
+    height: 250px;
+    background: #403d84;
+    color: #fff;
+    font-size: 15px;
+    border: 0;
+    outline: 0;
+    padding: 20px;
+    border-radius: 10px;
+    resize: none;
+    margin-bottom: 30px;
+}
+textarea::placeholder{
+    font-size: 16px;
+    color: #ddd;
+}
+.row{
+    width: 600px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+button{
+    background: #ff2963;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 30px;
+    border-radius: 35px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+}
+button img{
+    width: 16px;
+    margin-right: 10px;
+}
+select{
+   flex: 1;
+   color: #fff;
+   background: #403d84;
+   height: 50px;
+   padding: 0 20px;
+   outline: 0;
+   border: 0;
+   border-radius: 35px;
+   appearance: none;
+   background-image: url(dropdown..jpg);
+   background-repeat: no-repeat;
+   background-size: 15px;
+   background-position-x: calc(100% - 20px);
+   background-position-y:20px;
+}
+ 
+=======
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    background: url('./imgs/header.jpg');
+    background-size: 100%;
+    /* position: fixed; */
+    
+}
+
+/* navigation bar */
+#navbar{
+    overflow: hidden;
+    /* display: flex; */
+    align-items: center;
+    position:sticky;
+}
+
+#navbar ul{
+    display: flex;
+    position: sticky;
+}
+#navbar::before{
+    content: "";
+    background-color: aqua;
+    position:fixed;
+    overflow: hidden;
+    height: 10%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.4;
+    
+
+}
+
+#navbar ul li{
+    list-style: none;
+    font-size: 1.3rem;
+    
+}
+#navbar ul li a{
+    display: block;
+    padding: 5px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+  
+}
+#navbar ul li a:hover{
+   color: black;
+   background-color: aquamarine;
+}
+/* single post  */
+#single{
+    display: flex;
+margin-top:300px;
+border: 5px solid greenyellow;
+width: 85%;
+background: white;
+
+
+}
+#single .box{
+    
+    /* border: 2px solid red; */
+    padding: 5px;
+    margin:2px 4px;
+    border-radius: 20px;
+background: #fff;
+width: 70%;
+    
+}
+#single .box img{
+    height: 200px;
+    margin: auto;
+    display: block;
+}
+/* blog  */
+#blog{
+    /* border: 2px solid red; */
+  margin-top: 15%;
+  height: 550px;
+  width: 42%;
+}
+#blog .prymari{
+ padding-left: 120px;
+ margin: 35px;
+}
+#blog .starblog img{
+    height: 400px;
+padding-left:50px;
+}
+/* #blog .onlyone{
+border: 2px solid green;
+    width: 60%;
+} */
+#blog .ok{
+    border: 2px solid black;
+    margin: 10px;
+padding-left: 20px;
+width: 27%;
+}
+.ok:hover{
+    background-color: aqua;
+}
+
+/* first  */
+#first{
+    display: flex;
+    margin: 55px;
+    align-items: center;
+
+}
+.emat img{
+    height: 260px;
+}
+#first .only{
+    width: 50%;
+}
+#first .one{
+    border: 2px solid black;
+    margin: 10px;
+padding-left: 20px;
+width: 17%;
+/* background-color: aqua; */
+} 
+.one:hover{
+    background-color: aqua;
+}
+#first .ematok img{
+    height: 260px;
+}
+#first .only{
+    width: 80%;
+}
+/* #first .one{
+    border: 2px solid black;
+    margin: 10px;
+padding-left: 20px;
+width: 17%;
+/* background-color: aqua; */
+
+
+/* second  */
+#second{
+    display: flex;
+    margin: 35px;
+    align-items: center;
+}
+.meta img{
+    height: 260px;
+}
+#second .only{
+    width: 50%;
+}
+#second .two{
+    border: 2px solid black;
+    margin: 10px;
+padding-left: 20px;
+width: 17%;
+
+}
+.two:hover{
+    background-color: aqua;
+}
+/* third  */
+#third{
+    display: flex;
+    margin: 35px;
+    align-items: center;
+}
+.tag img{
+    height: 260px;
+}
+#third .only{
+    width: 50%;
+}
+#third .three{
+    border: 2px solid black;
+    margin: 10px;
+padding-left: 20px;
+width: 17%;
+
+}
+.three:hover{
+    background-color: aqua;
+}
+#posts{
+    display: inline-block;
+   border: 2px solid red;
+   margin: 100px;
+   margin-left: 600px;
+   height: 40px;
+   width: 420px;
+   background-color: aqua;
+}
+#posts .sit{
+    margin-left: 150px;
+}
+/* Dabol  */
+#dabol{
+    display: flex;
+    margin-top:50px;
+border: 5px solid greenyellow;
+/* width: 100%; */
+background: white;
+}
+#dabol.boxing{
+    
+    border: 2px solid red;
+    padding: 5px;
+    margin:2px 4px;
+    border-radius: 20px;
+background: #fff;
+width: 70%;
+    
+}
+.boxing img{
+    height: 200px;
+    margin:20px;
+    display: block;
+}
+.logo img{
+height: 100px;
+}
+#deep{
+    background-color: #fff ;
+    
+}
+>>>>>>> 5cf18ea39d8b13e75d431db7a75046e48922b755

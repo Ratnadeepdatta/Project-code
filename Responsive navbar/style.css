@@ -1,0 +1,119 @@
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        font-size: 62.5%;
+    }
+
+    body {
+        min-height: 100vh;
+        width: 100%;
+        background-image: url(tomas-malik-GXqK1Izf5vs-unsplash.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;  
+        padding: 0 3rem;
+        height: 10vh;
+        background-color: #fff;
+        box-shadow: 3px 3px 5px rgb(0, 0, 0, 0.1);
+        position: relative;
+    }
+
+    .logo p {
+        font-size: 1.8rem;
+        letter-spacing: 2px;
+        font-weight: 500;
+    }
+
+    .logo p span {
+        color: red;
+    }
+
+    .nav ul {
+        display: flex;
+        list-style: none;
+    }
+
+    .nav ul li {
+        display: flex;
+        height: 5rem;
+        align-items: center;
+    }
+
+    .nav ul li a {
+        text-decoration: none;
+        font-size: 1.4rem;
+        margin-right: 2rem;
+        color: #000;
+        transition: all 0.3s;
+    }
+
+    .nav ul li a:hover {
+        color: red;
+    }
+
+    .btn {
+        border: none;
+        background: none;
+        cursor: pointer;
+        display: none;
+    }
+
+    .nav_btn {
+        font-size: 2.4rem;
+        color: #000;
+    }
+
+    .ri-close-line {
+        display: none;
+    }
+
+    @media(max-width:640px) {
+        .sidebar {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: rgba(255, 255, 255, 0.175);
+            height: 100vh;
+            width: 15rem;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding-top: 5rem;
+            /* gap: 1rem; */
+            backdrop-filter: blur(10px);
+            box-shadow: -10px 0px 10px rgb(0, 0, 0, 0.1);
+            opacity: 0;
+            pointer-events: none;
+            visibility: hidden;
+            transition: 0.3s;
+        }
+
+        .btn {
+            display: block;
+            z-index: 999;
+        }
+
+        .nav_open .sidebar {
+            opacity: 1;
+            pointer-events: all;
+            visibility: visible;
+        }
+
+        .nav_open .ri-menu-line {
+            display: none;
+        }
+
+        .nav_open .ri-close-line {
+            display: block;
+        }
+    }

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wheather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="card">
+        <div class="search">
+            <input type="text" placeholder="enter city name" spellcheck="false">
+            <button><img src="search.png"></button>
+        </div>
+        <div class="weather">
+            <img src="rain.png" class="weather-icon">
+            <!-- <h1 class="temp">22°c</h1> -->
+            <h1 class="temp1">22°c</h1>
+            <h2 class="city">New York</h2>
+            <div class="details">
+                <div class="col">
+                    <img src="humidity.png">
+                    <div>
+                        <p class="humidity">50%</p>
+                        <p>Humidity</p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <img src="wind.png">
+                    <div>
+                        <p class="wind">15 km/h</p>
+                        <p>Wind Speed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const apiKey = "b5227eb415d8925187dc818bdeba0098";
+        const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=bangalore";
+
+        async function checkweather() {
+            const response = await fetch(apiUrl + `&appid=${apiKey}`);
+            var data = await response.json();
+
+            console.log("Data", data);
+
+            const humidity = document.querySelector(".humidity");
+
+            document.querySelector(".city").textContent = data.name;
+            // document.querySelector(".temp").innerHTML = data.main.temp + "°C";
+            document.querySelector(".temp1").innerHTML = `${data.main.temp}°c`;
+            humidity.innerHTML = data.main.humidity;
+            document.querySelector(".wind").innerHTML = data.wind.speed;
+        }
+
+        checkweather();
+
+    </script>
+
+</body>
+
+</html>
